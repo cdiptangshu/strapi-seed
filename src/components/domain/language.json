@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_domain_languages",
+  "info": {
+    "displayName": "Language"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "enumeration",
+      "enum": [
+        "english",
+        "bengali",
+        "hindi",
+        "malayalam"
+      ]
+    }
+  }
+}
