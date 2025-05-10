@@ -1,5 +1,5 @@
 ---
-name: 🛠 Engineering Task
+name: Engineering Task
 about: Track technical work that is not a user-facing feature
 title: "[Task] "
 labels: task
@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-## 🛠 Engineering Task
+## Engineering Task
 
 **Summary**  
 Briefly describe the engineering work to be done.
