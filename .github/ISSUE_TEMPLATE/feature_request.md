@@ -1,5 +1,5 @@
 ---
-name: 🚀 Feature Request
+name: Feature Request
 about: Suggest a new feature or improvement
 title: "[Feature] "
 labels: enhancement
@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-## 🚀 Feature Request
+## Feature Request
 
 **Describe the feature**  
 A clear and concise description of what the feature is and what it should do.
