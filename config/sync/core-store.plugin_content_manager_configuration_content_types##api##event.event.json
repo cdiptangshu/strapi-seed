@@ -85,7 +85,7 @@
           "editable": true
         },
         "list": {
-          "label": "startAt",
+          "label": "start at",
           "searchable": true,
           "sortable": true
         }
@@ -192,12 +192,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "name",
-        "type",
-        "engagement"
-      ],
       "edit": [
         [
           {
@@ -241,6 +235,13 @@
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "name",
+        "type",
+        "engagement",
+        "startAt"
       ]
     },
     "uid": "api::event.event"

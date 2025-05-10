@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "slug",
-      "defaultSortBy": "id",
+      "defaultSortBy": "slug",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -99,7 +99,7 @@
           "editable": true
         },
         "list": {
-          "label": "dateFrom",
+          "label": "date from",
           "searchable": true,
           "sortable": true
         }
@@ -113,7 +113,7 @@
           "editable": true
         },
         "list": {
-          "label": "dateTo",
+          "label": "date to",
           "searchable": true,
           "sortable": true
         }
@@ -178,12 +178,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "slug",
-        "artist",
-        "type"
-      ],
       "edit": [
         [
           {
@@ -223,6 +217,14 @@
             "size": 4
           }
         ]
+      ],
+      "list": [
+        "id",
+        "slug",
+        "artist",
+        "type",
+        "dateFrom",
+        "dateTo"
       ]
     },
     "uid": "api::engagement.engagement"

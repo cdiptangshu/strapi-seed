@@ -85,7 +85,7 @@
           "editable": true
         },
         "list": {
-          "label": "releasedOn",
+          "label": "released on",
           "searchable": true,
           "sortable": true
         }
@@ -220,12 +220,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "name",
-        "type",
-        "engagement"
-      ],
       "edit": [
         [
           {
@@ -281,6 +275,13 @@
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "name",
+        "type",
+        "engagement",
+        "releasedOn"
       ]
     },
     "uid": "api::record.record"

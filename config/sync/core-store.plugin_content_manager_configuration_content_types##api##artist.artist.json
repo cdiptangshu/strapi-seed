@@ -205,12 +205,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "name",
-        "type",
-        "bio"
-      ],
       "edit": [
         [
           {
@@ -262,6 +256,11 @@
             "size": 4
           }
         ]
+      ],
+      "list": [
+        "id",
+        "name",
+        "type"
       ]
     },
     "uid": "api::artist.artist"
