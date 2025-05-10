@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "singularName": "artist",
+    "pluralName": "artists",
+    "displayName": "Artist"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "solo",
+        "band"
+      ],
+      "default": "solo",
+      "required": true
+    },
+    "bio": {
+      "type": "text"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "genres": {
+      "type": "component",
+      "repeatable": true,
+      "component": "domain.genre"
+    },
+    "languages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "domain.language"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "activeFrom": {
+      "type": "date"
+    },
+    "activeTo": {
+      "type": "date"
+    }
+  }
+}
