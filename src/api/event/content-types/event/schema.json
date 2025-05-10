@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "concert",
+        "private",
+        "festival",
+        "competition",
+        "workshop"
+      ],
+      "required": false
+    },
+    "engagement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::engagement.engagement"
+    },
+    "description": {
+      "type": "text"
+    },
+    "startAt": {
+      "type": "datetime"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
