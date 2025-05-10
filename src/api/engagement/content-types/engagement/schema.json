@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "engagements",
+  "info": {
+    "singularName": "engagement",
+    "pluralName": "engagements",
+    "displayName": "Engagement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "artist": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::artist.artist"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "collaboration",
+        "commission"
+      ],
+      "required": false,
+      "default": "collaboration"
+    },
+    "roles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "domain.role"
+    },
+    "description": {
+      "type": "text"
+    },
+    "dateFrom": {
+      "type": "date",
+      "required": true
+    },
+    "dateTo": {
+      "type": "date"
+    }
+  }
+}

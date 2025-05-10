@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_domain_genres",
+  "info": {
+    "displayName": "Genre",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "enumeration",
+      "enum": [
+        "bluegrass",
+        "blues",
+        "folk",
+        "fusion",
+        "indie",
+        "jazz",
+        "rock"
+      ],
+      "required": false
+    }
+  }
+}

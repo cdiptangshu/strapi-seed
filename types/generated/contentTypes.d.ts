@@ -369,6 +369,160 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiArtistArtist extends Struct.CollectionTypeSchema {
+  collectionName: 'artists';
+  info: {
+    displayName: 'Artist';
+    pluralName: 'artists';
+    singularName: 'artist';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    activeFrom: Schema.Attribute.Date;
+    activeTo: Schema.Attribute.Date;
+    bio: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    genres: Schema.Attribute.Component<'domain.genre', true>;
+    languages: Schema.Attribute.Component<'domain.language', true>;
+    links: Schema.Attribute.Component<'shared.link', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::artist.artist'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    type: Schema.Attribute.Enumeration<['solo', 'band']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'solo'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEngagementEngagement extends Struct.CollectionTypeSchema {
+  collectionName: 'engagements';
+  info: {
+    displayName: 'Engagement';
+    pluralName: 'engagements';
+    singularName: 'engagement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    artist: Schema.Attribute.Relation<'oneToOne', 'api::artist.artist'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dateFrom: Schema.Attribute.Date & Schema.Attribute.Required;
+    dateTo: Schema.Attribute.Date;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::engagement.engagement'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    roles: Schema.Attribute.Component<'domain.role', true>;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['collaboration', 'commission']> &
+      Schema.Attribute.DefaultTo<'collaboration'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEventEvent extends Struct.CollectionTypeSchema {
+  collectionName: 'events';
+  info: {
+    description: '';
+    displayName: 'Event';
+    pluralName: 'events';
+    singularName: 'event';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    duration: Schema.Attribute.Integer;
+    engagement: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::engagement.engagement'
+    >;
+    links: Schema.Attribute.Component<'shared.link', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    startAt: Schema.Attribute.DateTime;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    type: Schema.Attribute.Enumeration<
+      ['concert', 'private', 'festival', 'competition', 'workshop']
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    venue: Schema.Attribute.Component<'shared.address', false>;
+  };
+}
+
+export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
+  collectionName: 'records';
+  info: {
+    displayName: 'Record';
+    pluralName: 'records';
+    singularName: 'record';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    engagement: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::engagement.engagement'
+    >;
+    genre: Schema.Attribute.Component<'domain.genre', false>;
+    label: Schema.Attribute.String;
+    language: Schema.Attribute.Component<'domain.language', false>;
+    links: Schema.Attribute.Component<'shared.link', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::record.record'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    releasedOn: Schema.Attribute.Date;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    type: Schema.Attribute.Enumeration<['single', 'ep', 'album']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'single'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -878,6 +1032,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::artist.artist': ApiArtistArtist;
+      'api::engagement.engagement': ApiEngagementEngagement;
+      'api::event.event': ApiEventEvent;
+      'api::record.record': ApiRecordRecord;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
