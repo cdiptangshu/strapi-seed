@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "records",
+  "info": {
+    "singularName": "record",
+    "pluralName": "records",
+    "displayName": "Record"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "single",
+        "ep",
+        "album"
+      ],
+      "required": true,
+      "default": "single"
+    },
+    "engagement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::engagement.engagement"
+    },
+    "description": {
+      "type": "text"
+    },
+    "releasedOn": {
+      "type": "date"
+    },
+    "label": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "genre": {
+      "type": "component",
+      "repeatable": false,
+      "component": "domain.genre"
+    },
+    "language": {
+      "type": "component",
+      "repeatable": false,
+      "component": "domain.language"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
