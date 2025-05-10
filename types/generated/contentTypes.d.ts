@@ -410,6 +410,7 @@ export interface ApiArtistArtist extends Struct.CollectionTypeSchema {
 export interface ApiEngagementEngagement extends Struct.CollectionTypeSchema {
   collectionName: 'engagements';
   info: {
+    description: '';
     displayName: 'Engagement';
     pluralName: 'engagements';
     singularName: 'engagement';
@@ -422,9 +423,8 @@ export interface ApiEngagementEngagement extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dateFrom: Schema.Attribute.Date & Schema.Attribute.Required;
-    dateTo: Schema.Attribute.Date;
     description: Schema.Attribute.Text;
+    endOn: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -434,6 +434,7 @@ export interface ApiEngagementEngagement extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     roles: Schema.Attribute.Component<'domain.role', true>;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    startOn: Schema.Attribute.Date & Schema.Attribute.Required;
     type: Schema.Attribute.Enumeration<['collaboration', 'commission']> &
       Schema.Attribute.DefaultTo<'collaboration'>;
     updatedAt: Schema.Attribute.DateTime;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "engagement",
     "pluralName": "engagements",
-    "displayName": "Engagement"
+    "displayName": "Engagement",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -36,11 +37,11 @@
     "description": {
       "type": "text"
     },
-    "dateFrom": {
+    "startOn": {
       "type": "date",
       "required": true
     },
-    "dateTo": {
+    "endOn": {
       "type": "date"
     }
   }
