@@ -2,8 +2,8 @@
 name: Feature Request
 about: Suggest a new feature or improvement
 title: "[Feature] "
-labels: [enhancement]
-projects: [cdiptangshu/3]
+labels: ["enhancement"]
+projects: ["cdiptangshu/3"]
 assignees: ''
 
 ---

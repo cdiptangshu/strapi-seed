@@ -2,8 +2,8 @@
 name: Bug Report
 about: Report something that isn't working as expected
 title: "[Bug] "
-labels: [bug]
-projects: [cdiptangshu/3]
+labels: ["bug"]
+projects: ["cdiptangshu/3"]
 assignees: ''
 
 ---
