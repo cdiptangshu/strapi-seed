@@ -4,11 +4,7 @@ Briefly describe the purpose of this pull request and what it does.
 
 ## ✅ Changes Made
 
-- [ ] Feature implementation
-- [ ] Bug fix
-- [ ] Refactor / Code cleanup
-- [ ] Documentation update
-- [ ] Other: _specify_
+Please specify the changes made to the code, such as feature implementation, bug fix, refactor/code cleanup, documentation update, or other.
 
 ### Description of Changes
 List the key changes or explain what was updated, added, or fixed.
