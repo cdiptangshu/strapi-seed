@@ -162,7 +162,7 @@
       "locale": null
     },
     {
-      "documentId": "mta8fztbffuk2merd3i0u5gt",
+      "documentId": "yvjenhkhvilti7n3qi688jyn",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::event.event",
@@ -175,7 +175,11 @@
           "startAt",
           "duration",
           "links.url",
-          "thumbnail"
+          "thumbnail",
+          "venue.name",
+          "venue.fullAddress",
+          "venue.latitude",
+          "venue.longitude"
         ]
       },
       "conditions": [],
@@ -200,7 +204,7 @@
       "locale": null
     },
     {
-      "documentId": "rx5mv6q4u4skqvfd017yb1ns",
+      "documentId": "sftkjknysengcd9m3nbhd9c3",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::event.event",
@@ -213,14 +217,18 @@
           "startAt",
           "duration",
           "links.url",
-          "thumbnail"
+          "thumbnail",
+          "venue.name",
+          "venue.fullAddress",
+          "venue.latitude",
+          "venue.longitude"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "mgi1159dh3fo5ng6u3ja5tvy",
+      "documentId": "q47fs249oputbd7roeymwj88",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::event.event",
@@ -233,7 +241,11 @@
           "startAt",
           "duration",
           "links.url",
-          "thumbnail"
+          "thumbnail",
+          "venue.name",
+          "venue.fullAddress",
+          "venue.latitude",
+          "venue.longitude"
         ]
       },
       "conditions": [],

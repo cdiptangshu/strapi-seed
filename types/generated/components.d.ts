@@ -49,6 +49,19 @@ export interface DomainRole extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedAddress extends Struct.ComponentSchema {
+  collectionName: 'components_shared_addresses';
+  info: {
+    displayName: 'Address';
+  };
+  attributes: {
+    fullAddress: Schema.Attribute.Text & Schema.Attribute.Required;
+    latitude: Schema.Attribute.Float;
+    longitude: Schema.Attribute.Float;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -65,6 +78,7 @@ declare module '@strapi/strapi' {
       'domain.genre': DomainGenre;
       'domain.language': DomainLanguage;
       'domain.role': DomainRole;
+      'shared.address': SharedAddress;
       'shared.link': SharedLink;
     }
   }
