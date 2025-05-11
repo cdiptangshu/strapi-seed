@@ -3,7 +3,7 @@ name: Engineering Task
 about: Track technical work that is not a user-facing feature
 title: "[Task] "
 labels: ["task"]
-projects: ["cdiptangshu/3"]
+projects: ["cdiptangshu/projects/3"]
 assignees: ''
 
 ---
