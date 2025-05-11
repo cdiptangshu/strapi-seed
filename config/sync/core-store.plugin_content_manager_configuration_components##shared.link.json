@@ -32,20 +32,80 @@
           "searchable": true,
           "sortable": true
         }
+      },
+      "text": {
+        "edit": {
+          "label": "text",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "text",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "hint": {
+        "edit": {
+          "label": "hint",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "hint",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isExternal": {
+        "edit": {
+          "label": "isExternal",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isExternal",
+          "searchable": true,
+          "sortable": true
+        }
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "url"
-      ],
       "edit": [
         [
           {
             "name": "url",
-            "size": 6
+            "size": 8
+          }
+        ],
+        [
+          {
+            "name": "text",
+            "size": 4
+          },
+          {
+            "name": "isExternal",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "hint",
+            "size": 8
           }
         ]
+      ],
+      "list": [
+        "id",
+        "url",
+        "text",
+        "hint"
       ]
     },
     "uid": "shared.link",

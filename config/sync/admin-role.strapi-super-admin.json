@@ -6,7 +6,7 @@
   "locale": null,
   "permissions": [
     {
-      "documentId": "a3dxv5md6ur6st1unmhiz8l0",
+      "documentId": "pax1njcayfedkubgcblhdnne",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::artist.artist",
@@ -16,6 +16,9 @@
           "type",
           "bio",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "genres.value",
           "languages.value",
           "thumbnail",
@@ -45,7 +48,7 @@
       "locale": null
     },
     {
-      "documentId": "e2xyv2wohcwq13vth909o7p0",
+      "documentId": "jpp8dxbsxbkafdxchzeeex06",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::artist.artist",
@@ -55,6 +58,9 @@
           "type",
           "bio",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "genres.value",
           "languages.value",
           "thumbnail",
@@ -66,7 +72,7 @@
       "locale": null
     },
     {
-      "documentId": "e71319pyxi98vjm9h09m5dc3",
+      "documentId": "u4cgulpxq75kg7xrjae46wjv",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::artist.artist",
@@ -76,6 +82,9 @@
           "type",
           "bio",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "genres.value",
           "languages.value",
           "thumbnail",
@@ -162,7 +171,7 @@
       "locale": null
     },
     {
-      "documentId": "yvjenhkhvilti7n3qi688jyn",
+      "documentId": "nre7ryfbpgrkfjihasjyjx1q",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::event.event",
@@ -175,6 +184,9 @@
           "startAt",
           "duration",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "thumbnail",
           "venue.name",
           "venue.fullAddress",
@@ -204,7 +216,7 @@
       "locale": null
     },
     {
-      "documentId": "sftkjknysengcd9m3nbhd9c3",
+      "documentId": "pedsse9341nzzhqb0is4ol5n",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::event.event",
@@ -217,6 +229,9 @@
           "startAt",
           "duration",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "thumbnail",
           "venue.name",
           "venue.fullAddress",
@@ -228,7 +243,7 @@
       "locale": null
     },
     {
-      "documentId": "q47fs249oputbd7roeymwj88",
+      "documentId": "iuldk3pbudv3ygztjqw4kkoj",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::event.event",
@@ -241,6 +256,9 @@
           "startAt",
           "duration",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "thumbnail",
           "venue.name",
           "venue.fullAddress",
@@ -252,7 +270,7 @@
       "locale": null
     },
     {
-      "documentId": "yx7m3talfoe2ofoo2m0gs87k",
+      "documentId": "edys3gp9p2hbecs6fnxehm9t",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::record.record",
@@ -265,6 +283,9 @@
           "releasedOn",
           "label",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "genre.value",
           "language.value",
           "thumbnail"
@@ -292,7 +313,7 @@
       "locale": null
     },
     {
-      "documentId": "tctcu8uwvf41hqe19fesx07h",
+      "documentId": "y3c82bcx2ras1ecjs9fzff2w",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::record.record",
@@ -305,6 +326,9 @@
           "releasedOn",
           "label",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "genre.value",
           "language.value",
           "thumbnail"
@@ -314,7 +338,7 @@
       "locale": null
     },
     {
-      "documentId": "jidvyoq0inp9lsrx6xvluyn0",
+      "documentId": "qo9m8yfofdllo8nezkk2tt7s",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::record.record",
@@ -327,6 +351,9 @@
           "releasedOn",
           "label",
           "links.url",
+          "links.text",
+          "links.hint",
+          "links.isExternal",
           "genre.value",
           "language.value",
           "thumbnail"
