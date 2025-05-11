@@ -45,7 +45,7 @@
       "repeatable": true,
       "component": "shared.link"
     },
-    "thumbnail": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,
