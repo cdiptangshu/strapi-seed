@@ -65,9 +65,13 @@ export interface SharedAddress extends Struct.ComponentSchema {
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
+    description: '';
     displayName: 'Link';
   };
   attributes: {
+    hint: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    text: Schema.Attribute.String;
     url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
