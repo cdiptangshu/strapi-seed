@@ -118,16 +118,16 @@
           "sortable": false
         }
       },
-      "thumbnail": {
+      "image": {
         "edit": {
-          "label": "thumbnail",
-          "description": "Image for the thumbnail",
+          "label": "image",
+          "description": "Upload the event poster or related graphic asset",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "thumbnail",
+          "label": "image",
           "searchable": false,
           "sortable": false
         }
@@ -246,19 +246,19 @@
         ],
         [
           {
-            "name": "links",
+            "name": "image",
             "size": 12
           }
         ],
         [
           {
-            "name": "thumbnail",
-            "size": 6
+            "name": "venue",
+            "size": 12
           }
         ],
         [
           {
-            "name": "venue",
+            "name": "links",
             "size": 12
           }
         ]

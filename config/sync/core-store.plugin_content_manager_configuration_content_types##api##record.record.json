@@ -146,16 +146,16 @@
           "sortable": false
         }
       },
-      "thumbnail": {
+      "image": {
         "edit": {
-          "label": "thumbnail",
-          "description": "Image for the thumbnail",
+          "label": "image",
+          "description": "Upload album cover or related graphic asset",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "thumbnail",
+          "label": "image",
           "searchable": false,
           "sortable": false
         }
@@ -220,6 +220,13 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "name",
+        "type",
+        "engagement",
+        "releasedOn"
+      ],
       "edit": [
         [
           {
@@ -253,6 +260,12 @@
         ],
         [
           {
+            "name": "image",
+            "size": 12
+          }
+        ],
+        [
+          {
             "name": "links",
             "size": 12
           }
@@ -268,20 +281,7 @@
             "name": "language",
             "size": 12
           }
-        ],
-        [
-          {
-            "name": "thumbnail",
-            "size": 6
-          }
         ]
-      ],
-      "list": [
-        "id",
-        "name",
-        "type",
-        "engagement",
-        "releasedOn"
       ]
     },
     "uid": "api::record.record"

@@ -464,6 +464,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::engagement.engagement'
     >;
+    image: Schema.Attribute.Media<'images'>;
     links: Schema.Attribute.Component<'shared.link', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
@@ -471,7 +472,6 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     startAt: Schema.Attribute.DateTime;
-    thumbnail: Schema.Attribute.Media<'images'>;
     type: Schema.Attribute.Enumeration<
       ['concert', 'private', 'festival', 'competition', 'workshop']
     >;
@@ -514,6 +514,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
 export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
   collectionName: 'records';
   info: {
+    description: '';
     displayName: 'Record';
     pluralName: 'records';
     singularName: 'record';
@@ -531,6 +532,7 @@ export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
       'api::engagement.engagement'
     >;
     genre: Schema.Attribute.Component<'domain.genre', false>;
+    image: Schema.Attribute.Media<'images'>;
     label: Schema.Attribute.String;
     language: Schema.Attribute.Component<'domain.language', false>;
     links: Schema.Attribute.Component<'shared.link', true>;
@@ -543,7 +545,6 @@ export interface ApiRecordRecord extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     releasedOn: Schema.Attribute.Date;
-    thumbnail: Schema.Attribute.Media<'images'>;
     type: Schema.Attribute.Enumeration<['single', 'ep', 'album']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'single'>;
