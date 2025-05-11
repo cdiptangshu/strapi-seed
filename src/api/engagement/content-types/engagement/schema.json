@@ -37,11 +37,11 @@
     "description": {
       "type": "text"
     },
-    "startOn": {
+    "startedOn": {
       "type": "date",
       "required": true
     },
-    "endOn": {
+    "endedOn": {
       "type": "date"
     }
   }
