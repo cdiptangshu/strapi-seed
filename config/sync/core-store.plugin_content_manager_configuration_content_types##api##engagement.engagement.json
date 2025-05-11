@@ -90,30 +90,30 @@
           "sortable": true
         }
       },
-      "startOn": {
+      "startedOn": {
         "edit": {
-          "label": "startOn",
+          "label": "startedOn",
           "description": "Engagement start date",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "start on",
+          "label": "started on",
           "searchable": true,
           "sortable": true
         }
       },
-      "endOn": {
+      "endedOn": {
         "edit": {
-          "label": "endOn",
+          "label": "endedOn",
           "description": "Engagement end date (leave empty if ongoing)",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "end on",
+          "label": "ended on",
           "searchable": true,
           "sortable": true
         }
@@ -183,8 +183,8 @@
         "slug",
         "artist",
         "type",
-        "startOn",
-        "endOn"
+        "startedOn",
+        "endedOn"
       ],
       "edit": [
         [
@@ -217,11 +217,11 @@
         ],
         [
           {
-            "name": "startOn",
+            "name": "startedOn",
             "size": 4
           },
           {
-            "name": "endOn",
+            "name": "endedOn",
             "size": 4
           }
         ]

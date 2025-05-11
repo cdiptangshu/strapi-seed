@@ -87,7 +87,7 @@
       "locale": null
     },
     {
-      "documentId": "kpxiz4ay8mdw7ts7ci9epups",
+      "documentId": "u4pj4bw5kcdky8pk1m60wq9s",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::engagement.engagement",
@@ -98,8 +98,8 @@
           "type",
           "roles.value",
           "description",
-          "startOn",
-          "endOn"
+          "startedOn",
+          "endedOn"
         ]
       },
       "conditions": [],
@@ -124,7 +124,7 @@
       "locale": null
     },
     {
-      "documentId": "rryk2ymo6eh7aeh6wa5kh25i",
+      "documentId": "xyo9j6bk7e9cnpa51m8he22g",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::engagement.engagement",
@@ -135,15 +135,15 @@
           "type",
           "roles.value",
           "description",
-          "startOn",
-          "endOn"
+          "startedOn",
+          "endedOn"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "wi290jswfwhg6e0n76012rh0",
+      "documentId": "ie5zlc850irp2g46bwoh5usk",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::engagement.engagement",
@@ -154,8 +154,8 @@
           "type",
           "roles.value",
           "description",
-          "startOn",
-          "endOn"
+          "startedOn",
+          "endedOn"
         ]
       },
       "conditions": [],
