@@ -1,7 +1,9 @@
 import path from 'path';
 
 export default ({ env }) => {
-  const client = env('DATABASE_CLIENT', 'sqlite');
+  const isProduction = env('NODE_ENV') === 'production';
+  const prodClient = env('DATABASE_CLIENT', 'sqlite');
+  const client = isProduction ? prodClient : 'sqlite';
 
   const connections = {
     mysql: {
