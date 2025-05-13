@@ -43,5 +43,9 @@ export default defineConfig([
       ...eslintConfigPrettier.rules,
     },
   },
-  globalIgnores(['dist/**/*', 'Ignore dist directory']),
+  globalIgnores([
+    'dist/**/*',
+    '.strapi/**/*',
+    'Ignore strapi and dist directory',
+  ]),
 ]);
