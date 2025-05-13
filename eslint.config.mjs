@@ -44,8 +44,8 @@ export default defineConfig([
     },
   },
   globalIgnores([
-    'dist/**/*',
     '.strapi/**/*',
-    'Ignore strapi and dist directory',
+    'dist/**/*',
+    'Ignore .strapi and dist directory',
   ]),
 ]);
