@@ -20,8 +20,12 @@ export default {
 
     const configName = 'strapi::webhook';
     const webhookName = 'Build Frontend';
-    const webhookUrl = process.env.WEBHOOK_URL || 'https://httpbin.org/post';
-    const isProduction = process.env.NODE_ENV === 'production';
+    const webhookUrl = process.env.WEBHOOK_URL;
+
+    if (!webhookUrl) {
+      strapi.log.warn('WEBHOOK_URL is missing or empty. Skipping webhook setup.');
+      return;
+    }
 
     const existing = await strapi.db.query(configName).findOne({ where: { name: webhookName } });
 
@@ -30,7 +34,7 @@ export default {
       url: webhookUrl,
       headers: {},
       events: ['entry.publish', 'entry.unpublish'],
-      enabled: isProduction,
+      enabled: true,
     };
 
     if (existing) {
@@ -39,6 +43,7 @@ export default {
       await strapi.db.query(configName).create({ data });
     }
 
-    strapi.log.info(`Webhook "${webhookName}" is now ${isProduction ? 'enabled' : 'disabled'}.`);
+    strapi.log.info(`Webhook "${webhookName}" is now configured.`);
+
   },
 };
