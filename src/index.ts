@@ -17,17 +17,20 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap({ strapi }: { strapi: Core.Strapi }) {
-
     const configName = 'strapi::webhook';
     const webhookName = 'Build Frontend';
     const webhookUrl = process.env.WEBHOOK_URL;
 
     if (!webhookUrl) {
-      strapi.log.warn('WEBHOOK_URL is missing or empty. Skipping webhook setup.');
+      strapi.log.warn(
+        'WEBHOOK_URL is missing or empty. Skipping webhook setup.'
+      );
       return;
     }
 
-    const existing = await strapi.db.query(configName).findOne({ where: { name: webhookName } });
+    const existing = await strapi.db
+      .query(configName)
+      .findOne({ where: { name: webhookName } });
 
     const data = {
       name: webhookName,
@@ -38,12 +41,13 @@ export default {
     };
 
     if (existing) {
-      await strapi.db.query(configName).update({ where: { id: existing.id }, data });
+      await strapi.db
+        .query(configName)
+        .update({ where: { id: existing.id }, data });
     } else {
       await strapi.db.query(configName).create({ data });
     }
 
     strapi.log.info(`Webhook "${webhookName}" is now configured.`);
-
   },
 };
