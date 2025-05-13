@@ -15,7 +15,8 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
     "cs": "config-sync",
     "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix"
+    "lint:fix": "npx eslint . --fix",
+    "prepare": "husky"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.12.7",
@@ -40,6 +41,10 @@
     "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.1.0",
+    "husky": "^9.1.7",
+    "install": "^0.13.0",
+    "lint-staged": "^16.0.0",
+    "npm": "^11.3.0",
     "prettier": "^3.5.3",
     "typescript": "^5",
     "typescript-eslint": "^8.32.1"
@@ -51,5 +56,13 @@
   "strapi": {
     "uuid": "5d9992b6-de19-410a-8407-8663660947a0",
     "installId": "3558360eb9cd17743d4c2261d83818eb7fc6347e480b1286819818b01e236ba8"
+  },
+  "lint-staged": {
+    "*.{js, jsx,ts,tsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write --ignore-unknown"
+    ]
   }
 }
