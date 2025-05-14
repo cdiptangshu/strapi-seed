@@ -187,6 +187,21 @@ This approach ensures webhook registration is dynamic and environment-aware, ide
 
 ---
 
+## Maintenance
+
+To contribute to the seed project.
+```
+# In your project
+git checkout -b improve-something
+# Make and commit changes
+git commit -am "Improve something"
+
+# Push to strapi-seed
+git push seed improve-something:improve-something
+```
+Create a pull request (PR) to merge the branch `imporive-something` to `main`
+
+
 ## License
 
 <a href="https://github.com/cdiptangshu/strapi-seed">strapi-seed</a> © 2025 by <a href="https://diptangshu.com">Diptangshu Chakrabarty</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
