@@ -17,4 +17,12 @@ export default ({ env }) => ({
             },
           },
   },
+  'config-sync': {
+    enabled: true,
+    config: {
+      minify: true,
+      soft: false,
+      importOnBootstrap: false,
+    },
+  },
 });
