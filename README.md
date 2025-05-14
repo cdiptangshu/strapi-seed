@@ -1,15 +1,20 @@
-# diptangshu-cms
-CMS backend for [diptangshu.com](https://diptangshu.com).
+# seed-strapi
+A foundational starter project for building Strapi applications with clean architecture, best practices, and modular structure.
 
 ## About
 
-A Strapi backend for the website. Created from using [strapi-seed](https://github.com/cdiptangshu/strapi-seed) 
+**seed-strapi** is a minimal yet extensible Strapi CMS base project, maintained alongside production projects to ensure it reflects real-world engineering improvements. It is ideal for bootstrapping new Strapi apps with a strong foundation and opinionated structure.
+
+This project serves as a reusable starting point for new content-driven applications.
 
 ---
 
 ## Features
 
-(TBD)
+- Clean baseline setup with minimal bloat
+- Capability to import/export config
+- Webhook configuration for publish/unpublish events
+- ESLint and Prettier
 
 ---
 
@@ -18,8 +23,8 @@ A Strapi backend for the website. Created from using [strapi-seed](https://githu
 ### Clone the Repository
 
 ```bash
-git clone git@github.com:cdiptangshu/diptangshu-cms.git
-cd diptangshu-cms
+git clone git@github.com:cdiptangshu/strapi-seed.git
+cd strapi-seed
 ```
 
 ### Install Dependencies
@@ -196,7 +201,7 @@ git push seed improve-something:improve-something
 ```
 Create a pull request (PR) to merge the branch `imporove-something` to `main`
 
----
 
 ## License
-(TBD)
+
+<a href="https://github.com/cdiptangshu/strapi-seed">strapi-seed</a> © 2025 by <a href="https://diptangshu.com">Diptangshu Chakrabarty</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
