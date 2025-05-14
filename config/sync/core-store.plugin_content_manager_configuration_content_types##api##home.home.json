@@ -22,7 +22,7 @@
       "bio": {
         "edit": {
           "label": "bio",
-          "description": "",
+          "description": "my bio",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -36,7 +36,7 @@
       "banner": {
         "edit": {
           "label": "banner",
-          "description": "",
+          "description": "Banner image",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -64,7 +64,7 @@
       "message": {
         "edit": {
           "label": "message",
-          "description": "",
+          "description": "A message to be displayed",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -135,12 +135,7 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "bio",
-        "banner",
-        "links"
-      ],
+      "list": ["id", "bio", "banner", "links"],
       "edit": [
         [
           {
@@ -161,7 +156,7 @@
         [
           {
             "name": "message",
-            "size": 6
+            "size": 12
           }
         ]
       ]
