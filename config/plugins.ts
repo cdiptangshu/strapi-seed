@@ -21,7 +21,6 @@ export default ({ env }) => ({
     enabled: true,
     config: {
       minify: true,
-      soft: false,
       importOnBootstrap: env('NODE_ENV') === 'production',
     },
   },
