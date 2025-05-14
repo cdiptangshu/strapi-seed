@@ -1,67 +1,192 @@
-# 🚀 Getting started with Strapi
+# seed-strapi
+A foundational starter project for building Strapi applications with clean architecture, best practices, and modular structure.
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## About
 
-### `develop`
+**seed-strapi** is a minimal yet extensible Strapi CMS base project, maintained alongside production projects to ensure it reflects real-world engineering improvements. It is ideal for bootstrapping new Strapi apps with a strong foundation and opinionated structure.
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
-
-```
-npm run develop
-# or
-yarn develop
-```
-
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-### Import / Export Config
-```
-npm run cs import
-npm run cs export
-``` 
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+This project serves as a reusable starting point for new content-driven applications.
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## Features
+
+- Clean baseline setup with minimal bloat
+- Capability to import/export config
+- Webhook configuration for publish/unpublish events
+- ESLint and Prettier
+
+---
+
+## Getting Started
+
+### Clone the Repository
+
+```bash
+git clone git@github.com:cdiptangshu/strapi-seed.git
+cd strapi-seed
+```
+
+### Install Dependencies
+```
+npm install
+```
+Here’s a clean and concise section you can add to your `README.md` to document the `.env` file setup:
+
+### Setup Environment
+
+To configure the local environment, follow these steps:
+
+1. **Copy the `.env.example` file**:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Update the `.env` file**:
+   Open the `.env` file and modify the environment variables as necessary for your local setup.
+
+
+### Run the Development Server
+```
+npm run develop
+```
+
+Here’s a clear and concise section you can add to your `README.md` to document the `build` and `start` scripts for your Strapi project:
+
+---
+
+## Build & Deploy in Production
+
+Make sure the environment variables are set up correctly in the **production environment**.
+
+These commands are used to run in production mode.
+
+### Build
+
+```bash
+npm run build
+```
+
+Builds the Strapi admin panel for production. This compiles the admin UI and prepares the project for deployment.
+
+> Must be run before `start` in production environments.
+
+### Start
+
+```bash
+npm run start
+```
+
+Starts the Strapi server in **production mode** using the previously built admin panel.
+
+---
+
+## Linting
+
+This project uses **ESLint** and **Prettier** to enforce consistent code style and formatting.
+
+### Run Linter
+
+```bash
+npm run lint
+```
+
+Checks your code for syntax and style issues based on the configured rules.
+
+### Fix Lint Errors Automatically
+
+```bash
+npm run lint:fix
+```
+
+Automatically fixes fixable linting and formatting issues.
+
+---
+
+### Configuration Files
+
+* `.eslintrc.js` — ESLint rules and plugins
+* `.prettierrc` — Prettier formatting rules
+* `.eslintignore` — Paths to ignore from linting
+
+---
+
+Would you like me to generate a working ESLint + Prettier config for you (with TypeScript + Strapi presets)?
+
+---
+
+## Configuration Sync Commands
+
+This project supports syncing Strapi configurations (e.g., content-types, components, settings) via custom scripts. These are useful for backing up or replicating settings across environments.
+
+### Export Configuration
+```
+npm run cs export
+```
+Exports the current project’s configuration (content-types, components, roles, permissions, etc.) to the config/sync/ directory.
+
+Use the -- --yes flag to auto-confirm prompts:
+```
+npm run cs export -- --yes
+```
+
+### Import Configuration
+```
+npm run cs import
+```
+Imports configuration from the config/sync/ directory back into the Strapi app. This overwrites existing definitions and should be used with care.
+
+Use the -- --yes flag to bypass confirmation:
+
+```
+npm run cs import -- --yes
+```
+
+### Default Sync Location
+Exported files will be stored in:
+
+```
+./config/sync/
+```
+Ensure this folder is version-controlled (or .gitignored) based on your workflow preference.
+
+
+### Notes
+* Make sure the Strapi server is stopped when importing configuration to avoid runtime conflicts.
+* These commands use [strapi-plugin-config-sync](https://www.npmjs.com/package/strapi-plugin-config-sync) under the hood. Confirm plugin version compatibility if issues arise.
+
+Here’s a cleaned-up and professional version of your webhook documentation:
+
+---
+
+## Webhook Configuration
+
+The webhook URL should be provided via the environment variable `WEBHOOK_URL`. If this variable is not set, **no webhook will be configured**.
+
+### Default Behavior
+
+When `WEBHOOK_URL` is defined, a webhook will be automatically registered to trigger on the following Strapi events:
+
+* `entry.publish`
+* `entry.unpublish`
+
+Additional configuration can be managed through the **Strapi Admin UI** under **Settings → Webhooks**.
+
+> **Note:** The Strapi Admin UI does not currently support setting webhook URLs via environment variables, which is why this automatic setup is handled in code.
+
+### Advanced Customization
+
+To add custom headers or modify webhook behavior, update the `bootstrap` function in:
+
+```
+src/index.ts
+```
+
+This approach ensures webhook registration is dynamic and environment-aware, ideal for staging and production environments.
+
+---
+
+## License
+
+<a href="https://github.com/cdiptangshu/strapi-seed">strapi-seed</a> © 2025 by <a href="https://diptangshu.com">Diptangshu Chakrabarty</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
