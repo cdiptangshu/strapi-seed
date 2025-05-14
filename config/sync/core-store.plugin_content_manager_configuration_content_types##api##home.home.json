@@ -13,39 +13,27 @@
     "metadatas": {
       "id": {
         "edit": {},
-        "list": {
-          "label": "id",
-          "searchable": true,
-          "sortable": true
-        }
+        "list": { "label": "id", "searchable": true, "sortable": true }
       },
       "bio": {
         "edit": {
           "label": "bio",
-          "description": "my bio",
+          "description": "A short writeup about Diptangshu",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
-        "list": {
-          "label": "bio",
-          "searchable": true,
-          "sortable": true
-        }
+        "list": { "label": "bio", "searchable": true, "sortable": true }
       },
       "banner": {
         "edit": {
           "label": "banner",
-          "description": "Banner image",
+          "description": "An image to be displayed as banner",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
-        "list": {
-          "label": "banner",
-          "searchable": false,
-          "sortable": false
-        }
+        "list": { "label": "banner", "searchable": false, "sortable": false }
       },
       "links": {
         "edit": {
@@ -55,25 +43,17 @@
           "visible": true,
           "editable": true
         },
-        "list": {
-          "label": "links",
-          "searchable": false,
-          "sortable": false
-        }
+        "list": { "label": "links", "searchable": false, "sortable": false }
       },
       "message": {
         "edit": {
           "label": "message",
-          "description": "A message to be displayed",
+          "description": "A short message",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
-        "list": {
-          "label": "message",
-          "searchable": true,
-          "sortable": true
-        }
+        "list": { "label": "message", "searchable": true, "sortable": true }
       },
       "createdAt": {
         "edit": {
@@ -83,11 +63,7 @@
           "visible": false,
           "editable": true
         },
-        "list": {
-          "label": "createdAt",
-          "searchable": true,
-          "sortable": true
-        }
+        "list": { "label": "createdAt", "searchable": true, "sortable": true }
       },
       "updatedAt": {
         "edit": {
@@ -97,11 +73,7 @@
           "visible": false,
           "editable": true
         },
-        "list": {
-          "label": "updatedAt",
-          "searchable": true,
-          "sortable": true
-        }
+        "list": { "label": "updatedAt", "searchable": true, "sortable": true }
       },
       "createdBy": {
         "edit": {
@@ -112,11 +84,7 @@
           "editable": true,
           "mainField": "firstname"
         },
-        "list": {
-          "label": "createdBy",
-          "searchable": true,
-          "sortable": true
-        }
+        "list": { "label": "createdBy", "searchable": true, "sortable": true }
       },
       "updatedBy": {
         "edit": {
@@ -127,38 +95,18 @@
           "editable": true,
           "mainField": "firstname"
         },
-        "list": {
-          "label": "updatedBy",
-          "searchable": true,
-          "sortable": true
-        }
+        "list": { "label": "updatedBy", "searchable": true, "sortable": true }
       }
     },
     "layouts": {
       "list": ["id", "bio", "banner", "links"],
       "edit": [
         [
-          {
-            "name": "bio",
-            "size": 6
-          },
-          {
-            "name": "banner",
-            "size": 6
-          }
+          { "name": "bio", "size": 6 },
+          { "name": "banner", "size": 6 }
         ],
-        [
-          {
-            "name": "links",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "message",
-            "size": 12
-          }
-        ]
+        [{ "name": "links", "size": 12 }],
+        [{ "name": "message", "size": 12 }]
       ]
     },
     "uid": "api::home.home"
