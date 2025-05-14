@@ -6,7 +6,7 @@
   "locale": null,
   "permissions": [
     {
-      "documentId": "bm0ozo9vuw2un5rr0grfdr4y",
+      "documentId": "vucqfq9lo0xgk2vz790e0ng7",
       "action": "admin::api-tokens.access",
       "actionParameters": {},
       "subject": null,
