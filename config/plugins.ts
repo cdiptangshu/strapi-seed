@@ -17,4 +17,11 @@ export default ({ env }) => ({
             },
           },
   },
+  'config-sync': {
+    enabled: true,
+    config: {
+      minify: true,
+      importOnBootstrap: env('NODE_ENV') === 'production',
+    },
+  },
 });

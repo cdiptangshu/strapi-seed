@@ -1,12 +1,12 @@
 {
-  "documentId": "l92pytp925w9zymrkgzb0o8x",
+  "documentId": "nh2gp0ff26qwq3uxj5fd509f",
   "name": "Author",
   "code": "strapi-author",
   "description": "Authors can manage the content they have created.",
   "locale": null,
   "permissions": [
     {
-      "documentId": "qtdf9dpbibpvu2kkk6lfjm8l",
+      "documentId": "kh2p2zahp7x9s7s9y1yvdkyq",
       "action": "plugin::upload.assets.copy-link",
       "actionParameters": {},
       "subject": null,
@@ -15,7 +15,7 @@
       "locale": null
     },
     {
-      "documentId": "fzi8gyvaxeiqd212hkdyyxz2",
+      "documentId": "ydlc7xqger4sdyuo6vis0otf",
       "action": "plugin::upload.assets.create",
       "actionParameters": {},
       "subject": null,
@@ -24,7 +24,7 @@
       "locale": null
     },
     {
-      "documentId": "m7y3o4aw1hhw0asc6iv71s82",
+      "documentId": "ofklqslmemiwmyux0mk6hvkb",
       "action": "plugin::upload.assets.download",
       "actionParameters": {},
       "subject": null,
@@ -33,18 +33,16 @@
       "locale": null
     },
     {
-      "documentId": "pkiaj13pq2jedazdveg0n63j",
+      "documentId": "ra7z2qa7ipk3z2rqn9phrqwh",
       "action": "plugin::upload.assets.update",
       "actionParameters": {},
       "subject": null,
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ],
+      "conditions": ["admin::is-creator"],
       "locale": null
     },
     {
-      "documentId": "m55mj7vzbarzfjf5s7ds52ed",
+      "documentId": "ipdkdy0lhr3au25unzz85arr",
       "action": "plugin::upload.configure-view",
       "actionParameters": {},
       "subject": null,
@@ -53,14 +51,12 @@
       "locale": null
     },
     {
-      "documentId": "kholc8ocfcncbe64n45lwcpc",
+      "documentId": "vw8snefnzar6pxg23h19x5cn",
       "action": "plugin::upload.read",
       "actionParameters": {},
       "subject": null,
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ],
+      "conditions": ["admin::is-creator"],
       "locale": null
     }
   ]
