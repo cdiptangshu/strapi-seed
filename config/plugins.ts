@@ -22,7 +22,7 @@ export default ({ env }) => ({
     config: {
       minify: true,
       soft: false,
-      importOnBootstrap: false,
+      importOnBootstrap: env('NODE_ENV') === 'production',
     },
   },
 });
