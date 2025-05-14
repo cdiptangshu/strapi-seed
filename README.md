@@ -1,9 +1,9 @@
-# seed-strapi
+# strapi-seed
 A foundational starter project for building Strapi applications with clean architecture, best practices, and modular structure.
 
 ## About
 
-**seed-strapi** is a minimal yet extensible Strapi CMS base project, maintained alongside production projects to ensure it reflects real-world engineering improvements. It is ideal for bootstrapping new Strapi apps with a strong foundation and opinionated structure.
+**strapi-seed** is a minimal yet extensible Strapi CMS base project, maintained alongside production projects to ensure it reflects real-world engineering improvements. It is ideal for bootstrapping new Strapi apps with a strong foundation and opinionated structure.
 
 This project serves as a reusable starting point for new content-driven applications.
 
@@ -31,7 +31,6 @@ cd strapi-seed
 ```
 npm install
 ```
-Here’s a clean and concise section you can add to your `README.md` to document the `.env` file setup:
 
 ### Setup Environment
 
@@ -51,8 +50,6 @@ To configure the local environment, follow these steps:
 ```
 npm run develop
 ```
-
-Here’s a clear and concise section you can add to your `README.md` to document the `build` and `start` scripts for your Strapi project:
 
 ---
 
@@ -112,10 +109,6 @@ Automatically fixes fixable linting and formatting issues.
 
 ---
 
-Would you like me to generate a working ESLint + Prettier config for you (with TypeScript + Strapi presets)?
-
----
-
 ## Configuration Sync Commands
 
 This project supports syncing Strapi configurations (e.g., content-types, components, settings) via custom scripts. These are useful for backing up or replicating settings across environments.
@@ -156,8 +149,6 @@ Ensure this folder is version-controlled (or .gitignored) based on your workflow
 * Make sure the Strapi server is stopped when importing configuration to avoid runtime conflicts.
 * These commands use [strapi-plugin-config-sync](https://www.npmjs.com/package/strapi-plugin-config-sync) under the hood. Confirm plugin version compatibility if issues arise.
 
-Here’s a cleaned-up and professional version of your webhook documentation:
-
 ---
 
 ## Webhook Configuration
@@ -186,20 +177,6 @@ src/index.ts
 This approach ensures webhook registration is dynamic and environment-aware, ideal for staging and production environments.
 
 ---
-
-## Maintenance
-
-To contribute to the seed project.
-```
-# In your project
-git checkout -b improve-something
-# Make and commit changes
-git commit -am "Improve something"
-
-# Push to strapi-seed
-git push seed improve-something:improve-something
-```
-Create a pull request (PR) to merge the branch `imporove-something` to `main`
 
 
 ## License
