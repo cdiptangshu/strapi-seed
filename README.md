@@ -199,7 +199,7 @@ git commit -am "Improve something"
 # Push to strapi-seed
 git push seed improve-something:improve-something
 ```
-Create a pull request (PR) to merge the branch `imporive-something` to `main`
+Create a pull request (PR) to merge the branch `imporove-something` to `main`
 
 
 ## License
