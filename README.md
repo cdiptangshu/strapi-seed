@@ -10,11 +10,13 @@ This project serves as a reusable starting point for new content-driven applicat
 ---
 
 ## Features
+This project integrates essential features powered by reliable cloud platforms and automation tools:
 
-- Clean baseline setup with minimal bloat
-- Capability to import/export config
-- Webhook configuration for publish/unpublish events
-- ESLint and Prettier
+- **Media Files**: Handled using [Cloudinary](https://cloudinary.com) for efficient cloud-based image and video storage, optimization, and delivery.
+- **Automated DB Backups**: Implemented with **GitHub Actions** and cloud storage solutions like **AWS S3** or other S3-compatible secure storage (e.g., [Backblaze B2](https://www.backblaze.com/b2/)).
+- **Configuration Sync**:  Supports syncing Strapi configurations (e.g., content-types, components, settings) via scripts
+- **Dynamic Webhook**: Webhook configuration for publish/unpublish events. Specify webhook URL in the environment.
+- **Linting and Formatting**: ESLint and Prettier
 
 ---
 
@@ -178,6 +180,39 @@ This approach ensures webhook registration is dynamic and environment-aware, ide
 
 ---
 
+
+## Automated DB Backup with GitHub Actions
+
+This project supports **automated backups of the database** using **GitHub Actions**. You can configure a scheduled workflow to periodically back up the database to a secure storage provider (e.g., AWS S3-compatible service such as Backblaze B2). 
+> **Note:** Currently only **PostgreSQL** database is supported.
+
+### Setup Instructions
+
+To enable this feature, the necessary **secrets and variables** need to be set in the GitHub repository settings.
+
+#### 1. Navigate to GitHub Repository Settings:
+
+* Go to **GitHub > \[Repository Name] > Settings > Secrets and variables > Actions**
+
+#### 2. Configure the Following
+
+| Name                    | Type     | Description                                                                     |
+| ----------------------- | -------- | ------------------------------------------------------------------------------- |
+| `DB_USERNAME`           | Variable | Database username                                                               |
+| `DB_HOST`               | Variable | Hostname of the the PostgreSQL server                                           |
+| `DB_PORT`               | Variable | Port of the PostgreSQL server                                                   |
+| `DB_BACKUP_FILENAME`    | Variable | Name of the backup file (e.g., `backup.sql`)                                    |
+| `AWS_S3_BUCKET`         | Variable | Name of the S3-compatible bucket to store the backup                            |
+| `AWS_REGION`            | Variable | Region of S3-compatible service                                                 |
+| `AWS_S3_ENDPOINT`       | Variable | Endpoint URL for the S3-compatible service                                      |
+| `DB_PASSWORD`           | Secret   | Password for the PostgreSQL user                                                |
+| `AWS_ACCESS_KEY_ID`     | Secret   | Access key ID for S3-compatible service                                         |
+| `AWS_SECRET_ACCESS_KEY` | Secret   | Secret access key for S3-compatible service                                     |
+---
+
+Once configured, a GitHub Actions workflow `db-backup.yml` can run on the defined schedule to securely back up the database and upload it to the specified storage bucket.
+
+---
 
 ## License
 
