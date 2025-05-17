@@ -7,7 +7,10 @@ export default {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register({ strapi }: { strapi: Core.Strapi }) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    strapi.server.routes([...require('./routes/health').default]);
+  },
 
   /**
    * An asynchronous bootstrap function that runs before
